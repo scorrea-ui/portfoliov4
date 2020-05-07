@@ -1,0 +1,57 @@
+.c-hero {
+  background-position: initial;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  &--home {
+    background-image: url('https://cdn2.hubspot.net/hubfs/7562645/Portfolio/hero.png');
+    background-size: cover;
+    min-height: 70rem;
+
+    @include iota-breakpoint(md) {
+      background-position: center;
+    }
+  }
+
+  &--about {
+    background-position: center;
+    background-color: color(blue);
+    background-image: url('https://cdn2.hubspot.net/hubfs/7562645/Portfolio/about_me.svg');
+    background-size: contain;
+    background-position: top;
+    margin-bottom: 5rem;
+    min-height: 45rem;
+    padding: 4rem 0;
+    width: 100%;
+  }
+
+  &__title {
+    @include type-size(level1);
+    margin-bottom: 2.4rem;
+    font-family: $rogliano;
+    font-weight: 900;
+  }
+
+  &__copy {
+    margin-bottom: 2.2rem;
+    font-family: $sofiaPro;
+  }
+
+  &__buttons {
+    text-align: center;
+
+    @include iota-breakpoint(md) {
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    margin: 1rem 0;
+    @include iota-breakpoint(md) {
+      margin: initial;
+    }
+  }
+}

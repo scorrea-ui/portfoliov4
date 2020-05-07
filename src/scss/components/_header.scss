@@ -1,0 +1,45 @@
+.c-header {
+  background-color: color(white);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  z-index: 10;
+
+  @include iota-breakpoint(md) {
+    text-align: left;
+  }
+
+  &__logo {
+    color: color(purple);
+    font-weight: 900;
+    text-decoration: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    @include iota-breakpoint(md) {
+    justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    img {
+        min-width: 1.6rem
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.c-btn {
+  appearance: none;
+  display: inline-flex;
+  font-family: $sofiaPro;
+  @include type-size(body-md);
+
+  &--primary {
+    padding: 0.8rem 5.9rem;
+    background-color: color(purple);
+    box-shadow: 0 0.8rem 1.6rem rgba(26, 35, 126, 0.3);
+    color: color(white);
+  }
+
+  &--secondary {
+    padding: 0.8rem 5.9rem;
+    border: 0.2rem solid color(green);
+    color: color(green);
+  }
+}

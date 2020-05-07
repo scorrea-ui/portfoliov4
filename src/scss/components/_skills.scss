@@ -1,0 +1,43 @@
+.c-skills {
+  &__box {
+    background-color: color(white);
+    border: 0.1rem solid color(purple);
+    border-radius: 0.5rem;
+    display: flex;
+    filter: drop-shadow(0 0.8rem 2rem rgba(26, 35, 126, 0.18));
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    width: 100%;
+    &:hover {
+      filter: drop-shadow(0 2.5rem 4.5rem rgba(26, 35, 126, 0.25));
+    }
+
+    &--default {
+      text-align: center;
+    }
+
+    &--about {
+      text-align: left;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    max-width: 8rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-family: $rogliano;
+    font-weight: 700;
+
+    @include type-size(body-lg);
+  }
+
+  &__copy {
+    font-family: $sofiaPro;
+  }
+}

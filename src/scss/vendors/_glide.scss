@@ -1,0 +1,36 @@
+@import '~@glidejs/glide/src/assets/sass/glide.core';
+
+.glide__slides {
+  align-items: center;
+}
+
+.glide__arrow {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: color(black);
+  cursor: pointer;
+  display: flex;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+
+  &--left {
+    left: -2rem;
+
+    @include iota-breakpoint(md) {
+      left: 10%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--right {
+    right: -2rem;
+    @include iota-breakpoint(md) {
+      right: 10%;
+    }
+  }
+}
