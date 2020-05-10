@@ -170,20 +170,20 @@ const Projects = () => {
             </div>
             <div className='o-grid__col u-4/12@md'>
               <a
-                href='https://unruffled-fermi-473b52.netlify.app/'
+                href='https://admiring-lewin-885a59.netlify.app/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <div className='c-projects__card'>
                   <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/booklist.png'
-                    alt='Book List'
+                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/news_room.png'
+                    alt='News Room'
                   />
                   <div className='c-projects__overlay'>
                     <div className='c-projects__copy'>
-                      <p>Book List</p>
+                      <p>News Room</p>
                       <p>
-                        Built with <strong>Traversy Media</strong>
+                        Built with <strong>Acamica</strong>
                       </p>
                     </div>
                   </div>
