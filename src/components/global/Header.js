@@ -1,26 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import ProjectButton from "../shared/ProjectsButton";
 
 const Header = (props) => {
+  const [active, setActive] = useState(false);
+
+  const openMenu = () => {
+    setActive(!active);
+  };
+
   return (
     <header className='c-header'>
       <div className='o-container'>
         <div className='o-grid o-grid--between'>
           <div className='o-grid__col u-3/12@md'>
-            <p className='c-header__logo'>
+            <div className='c-header__logo'>
               <Link to='/' className='c-header__link' aria-label='Home'>
                 Santiago Correa
               </Link>
-            </p>
+              <button
+                className='c-header__hamburger'
+                onClick={(e) => openMenu()}
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/images/icons/hamburger.png"}
+                  alt='Open menu'
+                />
+              </button>
+            </div>
           </div>
           <div className='o-grid__col u-9/12@md'>
-            <nav className='c-header__nav'>
-              <ul className='c-header__list'>
+            <nav className={`c-header__nav ${active ? "active" : ""}`}>
+              <ul className={`c-header__list ${active ? "active" : ""}`}>
                 <li className='c-header__item'>
                   <Link to='/' className='c-header__link' aria-label='Home'>
                     Home
                   </Link>
+                </li>
+                <li className='c-header__item'>
                   <Link
                     to='/about'
                     className='c-header__link'
@@ -28,6 +45,8 @@ const Header = (props) => {
                   >
                     About
                   </Link>
+                </li>
+                <li className='c-header__item'>
                   {props.match.path !== "/" ? (
                     <Link to='/#projects' className='c-header__link'>
                       Projects
@@ -38,6 +57,8 @@ const Header = (props) => {
                       content='Projects'
                     />
                   )}
+                </li>
+                <li className='c-header__item'>
                   <a
                     href='mailto:contact@wegrix.com'
                     className='c-header__link'
