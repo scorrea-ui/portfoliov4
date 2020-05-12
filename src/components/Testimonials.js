@@ -7,6 +7,14 @@ class Testimonials extends Component {
       startAt: 0,
       perView: 3,
       autoheight: true,
+      breakpoints: {
+        1024: {
+          perView: 3,
+        },
+        600: {
+          perView: 1,
+        },
+      },
     }),
   };
 
