@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.glide__track {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .glide__arrow {
   align-items: center;
   appearance: none;

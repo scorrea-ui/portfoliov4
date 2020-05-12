@@ -1,6 +1,22 @@
 import React, { Component } from "react";
-
+import Glide from "@glidejs/glide";
 class Testimonials extends Component {
+  state = {
+    slider: new Glide(".glide", {
+      type: "slider",
+      startAt: 0,
+      perView: 3,
+      autoheight: true,
+    }),
+  };
+
+  componentDidMount() {
+    this.state.slider.mount();
+  }
+
+  componentWillUnmount() {
+    this.state.slider.destroy();
+  }
   render() {
     const testimonials = [
       {
@@ -31,26 +47,30 @@ class Testimonials extends Component {
         <div className='c-testimonial'>
           <div className='o-container'>
             <h1 className='u-mb u-text-center'>Public Testimonials</h1>
-            <div className='o-grid o-grid--equal-height'>
-              {testimonials.map((testimonial) => {
-                return (
-                  <div className='o-grid__col u-4/12@md'>
-                    <div className='c-testimonial__card'>
-                      <div className='c-testimonial__content'>
-                        <p>{testimonial.content}</p>
+            <div className='glide'>
+              <div className='glide__track' data-glide-el='track'>
+                <div className='glide__slides'>
+                  {testimonials.map((testimonial) => {
+                    return (
+                      <div className='glide__slide' key={testimonial.author}>
+                        <div className='c-testimonial__card'>
+                          <div className='c-testimonial__content'>
+                            <p>{testimonial.content}</p>
+                          </div>
+                          <div className='c-testimonial__author'>
+                            <p className='c-testimonial__name'>
+                              {testimonial.author}
+                            </p>
+                            <p className='c-testimonial__company'>
+                              {testimonial.company}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                      <div className='c-testimonial__author'>
-                        <p className='c-testimonial__name'>
-                          {testimonial.author}
-                        </p>
-                        <p className='c-testimonial__company'>
-                          {testimonial.company}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
