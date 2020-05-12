@@ -19,6 +19,10 @@ $type-sizes: (
     3rem,
     1.36,
   ),
+  small: (
+    1.2rem,
+    1,
+  ),
 );
 
 @import '~iotacss/modules/iotacss-objs-type/objects.type';

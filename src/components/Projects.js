@@ -1,5 +1,57 @@
 import React from "react";
 
+const currentProjects = [
+  {
+    image:
+      "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/toyota.jpg",
+    project: "Toyota Forklit",
+    company: "ADK Group",
+    url: "https://www.toyotaforklift.com/",
+    tech: "Private",
+  },
+  {
+    image:
+      "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/cloudtask.jpg",
+    project: "Cloudtask",
+    company: "Cloudtask",
+    url: "https://www.cloudtask.com/",
+  },
+  {
+    image: "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/jha.jpg",
+    project: "JHA",
+    company: "ADK Group",
+    url: "https://www.johnhummel.com/",
+  },
+  {
+    image:
+      "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/privafy.jpg",
+    project: "Privafy",
+    company: "ADK Group",
+    url: "https://www.privafy.com/",
+  },
+  {
+    image:
+      "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/indecision.png",
+    project: "Indecision",
+    company: "Andrew Mead",
+    url: "https://santiago-correa-dev.github.io/indecision/",
+  },
+  {
+    image:
+      "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/pizza.png",
+    project: "Pizza Calculator App",
+    company: "Santiago Correa",
+    url: "https://unruffled-fermi-473b52.netlify.app/",
+  },
+  {
+    image:
+      "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/news_room.png",
+    project: "News Room App",
+    company: "Santiago Correa",
+    url: "https://admiring-lewin-885a59.netlify.app/",
+  },
+];
+
 const Projects = () => {
   return (
     <section>
@@ -13,183 +65,29 @@ const Projects = () => {
               experience.
             </p>
           </div>
-          <div className='o-grid o-grid--cards'>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://www.toyotaforklift.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/toyota.jpg'
-                    alt='Toyota Forkift'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>Toyota Forklift</p>
-                      <p>
-                        Built with <strong>ADK</strong>
-                      </p>
+          <div className='o-grid o-grid--cards o-grid--equal-height'>
+            {currentProjects.map((project) => {
+              return (
+                <div className='o-grid__col u-4/12@md'>
+                  <a
+                    className='c-projects__wrapper'
+                    href={project.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <div className='c-projects__card'>
+                      <img src={project.image} alt={project.project} />
+                      <div className='c-projects__content'>
+                        <div className='c-projects__copy'>
+                          <p className='c-projects__tagline'>{project.company}</p>
+                          <p className='c-projects__heading'>{project.project}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://cloudtask.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/cloudtask.jpg'
-                    alt='Cloudtask'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>Cloudtask</p>
-                      <p>
-                        Built with <strong>Cloudtask</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://www.johnhummel.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/jha.jpg'
-                    alt='John Hummel'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>JHA</p>
-                      <p>
-                        Built with <strong>ADK</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://www.privafy.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/privafy.jpg'
-                    alt='Privafy'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>Privafy</p>
-                      <p>
-                        Built with <strong>ADK</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://santiago-correa-dev.github.io/indecision/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/indecision.png'
-                    alt='indecision'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>indecision</p>
-                      <p>
-                        Built with <strong>indecision</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://santiago-correa-dev.github.io/frogger/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/frogger.png'
-                    alt='Frogger'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>Frogger</p>
-                      <p>
-                        Built with <strong>Udacity</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://unruffled-fermi-473b52.netlify.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/pizza.png'
-                    alt='Pizza Calculator'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>Pizza Calculator</p>
-                      <p>
-                        Built with <strong>Acamica</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='o-grid__col u-4/12@md'>
-              <a
-                href='https://admiring-lewin-885a59.netlify.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <div className='c-projects__card'>
-                  <img
-                    src='https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/news_room.png'
-                    alt='News Room'
-                  />
-                  <div className='c-projects__overlay'>
-                    <div className='c-projects__copy'>
-                      <p>News Room</p>
-                      <p>
-                        Built with <strong>Acamica</strong>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
