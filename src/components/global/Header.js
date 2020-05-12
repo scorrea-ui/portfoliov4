@@ -42,7 +42,7 @@ const Header = (props) => {
                     href='mailto:contact@wegrix.com'
                     className='c-header__link'
                   >
-                    Get In Touch
+                    Contact Me
                   </a>
                 </li>
               </ul>
