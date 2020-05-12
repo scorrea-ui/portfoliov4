@@ -1,16 +1,5 @@
 import React from "react";
-
-const scrollToProject = (event) => {
-  const projects = document.querySelector(
-    event.target.getAttribute("data-scroll")
-  );
-
-  projects.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
-  });
-};
+import ProjectButton from "./shared/ProjectsButton";
 
 const Hero = (props) => {
   return (
@@ -27,13 +16,10 @@ const Hero = (props) => {
               ) : null}
               {props.buttons ? (
                 <div className='c-hero__buttons'>
-                  <button
+                  <ProjectButton
                     className='c-btn c-btn--primary c-hero__btn js-btn'
-                    data-scroll='#projects'
-                    onClick={(e) => scrollToProject(e)}
-                  >
-                    Projects
-                  </button>
+                    content='Projects'
+                  />
                   <a
                     href='tel:3008753370'
                     className='c-btn c-btn--secondary c-hero__btn'

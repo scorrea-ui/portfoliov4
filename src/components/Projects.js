@@ -68,7 +68,7 @@ const Projects = () => {
           <div className='o-grid o-grid--cards o-grid--equal-height'>
             {currentProjects.map((project) => {
               return (
-                <div className='o-grid__col u-4/12@md'>
+                <div className='o-grid__col u-4/12@md' key={project.project}>
                   <a
                     className='c-projects__wrapper'
                     href={project.url}

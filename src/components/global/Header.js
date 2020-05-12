@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ProjectButton from "../shared/ProjectsButton";
 
 const Header = () => {
   return (
@@ -17,6 +18,9 @@ const Header = () => {
             <nav className='c-header__nav'>
               <ul className='c-header__list'>
                 <li className='c-header__item'>
+                  <Link to='/' className='c-header__link' aria-label='Home'>
+                    Home
+                  </Link>
                   <Link
                     to='/about'
                     className='c-header__link'
@@ -24,6 +28,16 @@ const Header = () => {
                   >
                     About
                   </Link>
+                  <ProjectButton
+                    className='c-header__link'
+                    content='Projects'
+                  />
+                  <a
+                    href='mailto:contact@wegrix.com'
+                    className='c-header__link'
+                  >
+                    Get In Touch
+                  </a>
                 </li>
               </ul>
             </nav>
