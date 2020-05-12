@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import ProjectButton from "../shared/ProjectsButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className='c-header'>
       <div className='o-container'>
@@ -28,10 +28,16 @@ const Header = () => {
                   >
                     About
                   </Link>
-                  <ProjectButton
-                    className='c-header__link'
-                    content='Projects'
-                  />
+                  {props.match.path !== "/" ? (
+                    <Link to='/#projects' className='c-header__link'>
+                      Projects
+                    </Link>
+                  ) : (
+                    <ProjectButton
+                      className='c-header__link'
+                      content='Projects'
+                    />
+                  )}
                   <a
                     href='mailto:contact@wegrix.com'
                     className='c-header__link'
@@ -48,4 +54,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);
