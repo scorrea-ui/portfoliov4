@@ -6,6 +6,7 @@ const scrollToProject = (event) => {
   );
 
   if (projects) {
+    // eslint-disable-next-line
     projects.map((project) => {
       project.scrollIntoView({
         behavior: "smooth",

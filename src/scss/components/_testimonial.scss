@@ -1,0 +1,53 @@
+.c-testimonial {
+  display: flex;
+  margin-bottom: 10rem;
+
+  &__card {
+    border-radius: 2rem;
+    background-color: color(white);
+    box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    position: relative;
+    width: 100%;
+  }
+
+  &__content {
+    font-style: italic;
+    padding: 6.1rem 5.6rem 10rem 5.6rem;
+    position: relative;
+    height: 100%;
+
+    &::after {
+      background-size: 3rem;
+      background-repeat: no-repeat;
+      background-image: url(../../assets/icons/quote-mark.png);
+      content: '';
+      height: 6rem;
+      width: 6rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateX(-4rem);
+    }
+  }
+
+  &__author {
+    background: linear-gradient(#7180e1 0%, #5866c3 100%);
+    border-radius: 0 0 2rem 2rem;
+    padding: 5.6rem 4.6rem;
+    text-align: center;
+  }
+
+  &__name {
+    color: color(white);
+    font-weight: 700;
+  }
+
+  &__company {
+    color: color(periwinkle);
+  }
+}
