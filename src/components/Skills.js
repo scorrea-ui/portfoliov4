@@ -41,7 +41,7 @@ const Skills = () => {
                 />
                 <p className='c-skills__title'>Functional</p>
                 <p className='c-skills__copy'>
-                  Use of vanilla Javascript or Javascript frameworks.
+                  Use of vanilla javascript or javascript frameworks.
                 </p>
               </div>
             </div>

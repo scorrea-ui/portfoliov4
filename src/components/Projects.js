@@ -4,7 +4,7 @@ const currentProjects = [
   {
     image:
       "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/toyota.jpg",
-    project: "Toyota Forklit",
+    project: "Toyota Forklift",
     company: "ADK Group",
     url: "https://www.toyotaforklift.com/",
     tech: "Private",
@@ -12,8 +12,8 @@ const currentProjects = [
   {
     image:
       "https://cdn2.hubspot.net/hubfs/7562645/Portfolio/projects/cloudtask.jpg",
-    project: "Cloudtask",
-    company: "Cloudtask",
+    project: "CloudTask",
+    company: "CloudTask",
     url: "https://www.cloudtask.com/",
   },
   {
