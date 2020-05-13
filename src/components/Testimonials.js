@@ -5,8 +5,11 @@ class Testimonials extends Component {
     slider: new Glide(".glide", {
       autoheight: true,
       breakpoints: {
-        1024: {
+        1280: {
           perView: 3,
+        },
+        1024: {
+          perView: 2
         },
         600: {
           perView: 1,
