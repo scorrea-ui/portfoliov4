@@ -3,10 +3,6 @@ import Glide from "@glidejs/glide";
 class Testimonials extends Component {
   state = {
     slider: new Glide(".glide", {
-      type: "slider",
-      bound: true,
-      startAt: 0,
-      perView: 3,
       autoheight: true,
       breakpoints: {
         1024: {
@@ -16,10 +12,14 @@ class Testimonials extends Component {
           perView: 1,
         },
       },
+      bound: true,
       peek: {
-        before: '50px',
-        after: '50px'
-      }
+        before: "20px",
+        after: "20px",
+      },
+      perView: 3,
+      startAt: 0,
+      type: "carousel",
     }),
   };
 
@@ -36,7 +36,7 @@ class Testimonials extends Component {
         content: `For some time I've served as a facilitator and mentor for
         Santiago and I can definitely ensure that it is rare to
         come across standout talent like him.`,
-        author: "Manuel Stroh | Full Stack Developer",
+        author: "Manuel Stroh | Full Stack Dev",
         company: "Globant",
       },
       {
@@ -83,6 +83,10 @@ class Testimonials extends Component {
                     );
                   })}
                 </div>
+              </div>
+              <div data-glide-el='controls'>
+                <button className="glide__arrow glide__arrow--left" data-glide-dir='<'></button>
+                <button className="glide__arrow glide__arrow--right" data-glide-dir='>'></button>
               </div>
             </div>
           </div>
