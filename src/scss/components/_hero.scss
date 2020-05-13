@@ -42,8 +42,10 @@
 
   &__buttons {
     text-align: center;
+    width: 100%;
 
     @include iota-breakpoint(md) {
+      display: flex;
       text-align: left;
     }
   }
@@ -51,7 +53,11 @@
   &__btn {
     margin: 1rem 0;
     @include iota-breakpoint(md) {
-      margin: initial;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
