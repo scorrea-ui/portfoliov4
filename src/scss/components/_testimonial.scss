@@ -14,6 +14,7 @@
   }
 
   &__content {
+    font-family: $rogliano;
     font-style: italic;
     height: 100%;
     padding: 2.4rem;
@@ -44,16 +45,19 @@
   &__author {
     background: linear-gradient(#7180e1 0%, #5866c3 100%);
     border-radius: 0 0 2rem 2rem;
+    font-family: $sofiaPro;
     padding: 2rem;
     text-align: center;
   }
 
   &__name {
     color: color(white);
+    font-family: $sofiaPro;
     font-weight: 700;
   }
 
   &__company {
     color: color(periwinkle);
+    font-family: $sofiaPro;
   }
 }
