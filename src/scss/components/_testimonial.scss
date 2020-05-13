@@ -17,12 +17,8 @@
   &__content {
     font-style: italic;
     height: 100%;
-    padding: 4rem 2rem;
+    padding: 5.6rem;
     position: relative;
-
-    @include iota-breakpoint(md) {
-      padding: 5.6rem;
-    }
 
     &::after {
       background-size: 3rem;
@@ -41,12 +37,8 @@
   &__author {
     background: linear-gradient(#7180e1 0%, #5866c3 100%);
     border-radius: 0 0 2rem 2rem;
-    padding: 2.5rem 2rem;
+    padding: 3.6rem;
     text-align: center;
-
-    @include iota-breakpoint(md) { 
-      padding: 3.6rem;
-    }
   }
 
   &__name {

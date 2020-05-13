@@ -4,6 +4,7 @@ class Testimonials extends Component {
   state = {
     slider: new Glide(".glide", {
       type: "slider",
+      bound: true,
       startAt: 0,
       perView: 3,
       autoheight: true,
@@ -15,6 +16,10 @@ class Testimonials extends Component {
           perView: 1,
         },
       },
+      peek: {
+        before: '50px',
+        after: '50px'
+      }
     }),
   };
 
