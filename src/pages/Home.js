@@ -4,7 +4,7 @@ import Header from "../components/global/Header";
 import Footer from "../components/global/Footer";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
-import Quote from "../components/Quote";
+import Testimonials from "../components/Testimonials";
 import Projects from "../components/Projects";
 
 class Home extends Component {
@@ -66,7 +66,7 @@ class Home extends Component {
         <Hero className={classes} title={title} copy={copy} buttons={buttons} />
         <Skills />
         <Projects />
-        <Quote />
+        <Testimonials />
         <Footer />
       </div>
     );

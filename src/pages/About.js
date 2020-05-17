@@ -61,7 +61,6 @@ class About extends Component {
         <Header />
         <Hero className={classes} buttons={buttons} />
         <Me />
-        <Testimonials />
         <Footer />
       </div>
     );
