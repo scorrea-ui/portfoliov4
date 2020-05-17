@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Glide from "@glidejs/glide";
+import Fade from "react-reveal/Fade";
 class Testimonials extends Component {
   state = {
     slider: new Glide(".glide", {
@@ -9,7 +10,7 @@ class Testimonials extends Component {
           perView: 3,
         },
         1024: {
-          perView: 2
+          perView: 2,
         },
         600: {
           perView: 1,
@@ -59,42 +60,50 @@ class Testimonials extends Component {
       },
     ];
     return (
-      <section>
-        <div className='c-testimonial'>
-          <div className='o-container'>
-            <h1 className='u-mb u-text-center'>Public Testimonials</h1>
-            <div className='glide'>
-              <div className='glide__track' data-glide-el='track'>
-                <div className='glide__slides'>
-                  {testimonials.map((testimonial) => {
-                    return (
-                      <div className='glide__slide' key={testimonial.author}>
-                        <div className='c-testimonial__card'>
-                          <div className='c-testimonial__content'>
-                            <p>{testimonial.content}</p>
-                          </div>
-                          <div className='c-testimonial__author'>
-                            <p className='c-testimonial__name'>
-                              {testimonial.author}
-                            </p>
-                            <p className='c-testimonial__company'>
-                              {testimonial.company}
-                            </p>
+      <Fade down>
+        <section>
+          <div className='c-testimonial'>
+            <div className='o-container'>
+              <h1 className='u-mb u-text-center'>Public Testimonials</h1>
+              <div className='glide'>
+                <div className='glide__track' data-glide-el='track'>
+                  <div className='glide__slides'>
+                    {testimonials.map((testimonial) => {
+                      return (
+                        <div className='glide__slide' key={testimonial.author}>
+                          <div className='c-testimonial__card'>
+                            <div className='c-testimonial__content'>
+                              <p>{testimonial.content}</p>
+                            </div>
+                            <div className='c-testimonial__author'>
+                              <p className='c-testimonial__name'>
+                                {testimonial.author}
+                              </p>
+                              <p className='c-testimonial__company'>
+                                {testimonial.company}
+                              </p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-              <div data-glide-el='controls'>
-                <button className="glide__arrow glide__arrow--left" data-glide-dir='<'></button>
-                <button className="glide__arrow glide__arrow--right" data-glide-dir='>'></button>
+                <div data-glide-el='controls'>
+                  <button
+                    className='glide__arrow glide__arrow--left'
+                    data-glide-dir='<'
+                  ></button>
+                  <button
+                    className='glide__arrow glide__arrow--right'
+                    data-glide-dir='>'
+                  ></button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Fade>
     );
   }
 }

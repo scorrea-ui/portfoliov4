@@ -1,4 +1,5 @@
 import React from "react";
+import Zoom from "react-reveal/Zoom";
 
 const currentProjects = [
   {
@@ -68,24 +69,30 @@ const Projects = () => {
           <div className='o-grid o-grid--cards o-grid--equal-height'>
             {currentProjects.map((project) => {
               return (
-                <div className='o-grid__col u-4/12@md' key={project.project}>
-                  <a
-                    className='c-projects__wrapper'
-                    href={project.url}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <div className='c-projects__card'>
-                      <img src={project.image} alt={project.project} />
-                      <div className='c-projects__content'>
-                        <div className='c-projects__copy'>
-                          <p className='c-projects__tagline'>{project.company}</p>
-                          <p className='c-projects__heading'>{project.project}</p>
+                <Zoom>
+                  <div className='o-grid__col u-4/12@md' key={project.project}>
+                    <a
+                      className='c-projects__wrapper'
+                      href={project.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <div className='c-projects__card'>
+                        <img src={project.image} alt={project.project} />
+                        <div className='c-projects__content'>
+                          <div className='c-projects__copy'>
+                            <p className='c-projects__tagline'>
+                              {project.company}
+                            </p>
+                            <p className='c-projects__heading'>
+                              {project.project}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                </div>
+                    </a>
+                  </div>
+                </Zoom>
               );
             })}
           </div>
