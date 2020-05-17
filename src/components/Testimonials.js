@@ -16,10 +16,6 @@ class Testimonials extends Component {
         },
       },
       bound: true,
-      peek: {
-        before: "20px",
-        after: "20px",
-      },
       perView: 3,
       startAt: 0,
       type: "carousel",
