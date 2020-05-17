@@ -60,7 +60,7 @@ const Header = (props) => {
                 </li>
                 <li className='c-header__item'>
                   <a
-                    href='mailto:contact@wegrix.com'
+                    href='mailto:scorrea.dev@gmail.com'
                     className='c-header__link'
                   >
                     Contact
