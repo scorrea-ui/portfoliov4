@@ -25,7 +25,7 @@ const Me = () => {
             <div className='o-grid__col u-9/12@md'>
               <p className='c-about__copy u-mb'>
                 As a child I always loved tech, I was amazed with websites such
-                as facebook, yahoo and much others. I was like man, how the heck
+                as Facebook, Yahoo and much others. I was like man, how the heck
                 can I create something on the web, I want to be like one of
                 these companies, so I said let's do this, what the heck.
               </p>
@@ -59,10 +59,11 @@ const Me = () => {
               </p>
               <p className='c-about__copy u-mb'>
                 I build and maintain websites, I love being in constant contact
-                with clients/people of interest keeping them updated on progress
-                , milestones, issues that come up and more based on what is
-                happening at the moment, I also love to adapt to tools that are
-                being used to ensure everyone feels comfortable and confident.
+                with clients/people of interest keeping them updated on
+                progress, milestones, issues that come up and more based on what
+                is happening at the moment, I also love to adapt to tools that
+                are being used to ensure everyone feels comfortable and
+                confident.
               </p>
               <p className='c-about__copy u-mb'>
                 I also consider that it is important to love what you do, and
