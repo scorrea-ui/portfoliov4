@@ -40,7 +40,7 @@ class Header extends Component {
                   </li>
                   <li className='c-header__item'>
                     <Link
-                      href='/about'
+                      href='http://wegrix.com/about'
                       className='c-header__link'
                       aria-label='About Me Page'
                     >
