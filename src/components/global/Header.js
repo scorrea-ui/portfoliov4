@@ -39,7 +39,7 @@ class Header extends Component {
                     </Link>
                   </li>
                   <li className='c-header__item'>
-                    <Link href='/about'>
+                    <Link href='/about' passHref>
                       <a className='c-header__link'>About</a>
                     </Link>
                   </li>
