@@ -14,10 +14,11 @@ class Home extends Component {
     copy:
       "A showcase of the websites I've worked on and skills acquired. Ranging from small to big projects.",
     buttons: true,
+    titleClass: "c-hero__title c-hero__title--home",
   };
 
   render() {
-    const { classes, title, copy, buttons } = this.state;
+    const { classes, title, copy, buttons, titleClass } = this.state;
     return (
       <div>
         <Helmet>
@@ -63,7 +64,13 @@ class Home extends Component {
           />
         </Helmet>
         <Header />
-        <Hero className={classes} title={title} copy={copy} buttons={buttons} />
+        <Hero
+          className={classes}
+          title={title}
+          copy={copy}
+          buttons={buttons}
+          titleClass={titleClass}
+        />
         <Skills />
         <Projects />
         <Testimonials />

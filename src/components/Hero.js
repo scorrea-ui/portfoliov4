@@ -7,11 +7,13 @@ const Hero = (props) => {
     <section>
       <div className={props.className}>
         <div className='o-container'>
-          <div className='o-grid'>
-            <div className='o-grid__col u-7/12@md'>
+          <div className={`${props.col ? "o-grid o-grid--flush" : "o-grid "}`}>
+            <div
+              className={`o-grid__col ${props.col ? props.col : "u-7/12@md"}`}
+            >
               {props.title ? (
                 <Fade left delay={500}>
-                  <h1 className='c-hero__title'>{props.title}</h1>
+                  <h1 className={props.titleClass}>{props.title}</h1>
                 </Fade>
               ) : null}
               {props.copy ? (

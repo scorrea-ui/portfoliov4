@@ -3,17 +3,10 @@ import { Helmet } from "react-helmet";
 import Header from "../components/global/Header";
 import Hero from "../components/Hero";
 import Me from "../components/Me";
-import Testimonials from "../components/Testimonials";
 import Footer from "../components/global/Footer";
 
 class About extends Component {
-  state = {
-    classes: "c-hero c-hero--about",
-    buttons: false,
-  };
-
   render() {
-    const { classes, buttons } = this.state;
     return (
       <div>
         <Helmet>
@@ -59,7 +52,6 @@ class About extends Component {
           />
         </Helmet>
         <Header />
-        <Hero className={classes} buttons={buttons} />
         <Me />
         <Footer />
       </div>
