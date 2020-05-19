@@ -34,17 +34,13 @@ class Header extends Component {
               <nav className={`c-header__nav ${active ? "active" : ""}`}>
                 <ul className={`c-header__list ${active ? "active" : ""}`}>
                   <li className='c-header__item'>
-                    <Link href='/' className='c-header__link' aria-label='Home'>
-                      Home
+                    <Link href='/'>
+                      <a className='c-header__link'>Home</a>
                     </Link>
                   </li>
                   <li className='c-header__item'>
-                    <Link
-                      href='https://wegrix.com/about'
-                      className='c-header__link'
-                      aria-label='About Me Page'
-                    >
-                      About
+                    <Link href='/about'>
+                      <a className='c-header__link'>About</a>
                     </Link>
                   </li>
                   <li className='c-header__item'>
