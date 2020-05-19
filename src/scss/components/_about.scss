@@ -1,10 +1,11 @@
 .c-about {
   margin: 14rem 0;
   &__title {
-    @include type-size(level1);
+    @include type-size(level2);
     margin-bottom: 8rem;
 
     @include iota-breakpoint(md) {
+      @include type-size(level1);
       margin-bottom: 14rem;
     }
   }
