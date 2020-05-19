@@ -17,7 +17,7 @@ const Footer = () => {
               <div className='c-footer__block'>
                 <img
                   className='c-footer__img'
-                  src={`${process.env.PUBLIC_URL}/images/icons/linkedin-in-brands.svg`}
+                  src="/images/icons/linkedin-in-brands.svg"
                   alt='Linkedin'
                 />
               </div>
@@ -28,7 +28,7 @@ const Footer = () => {
               <div className='c-footer__block'>
                 <img
                   className='c-footer__img'
-                  src={`${process.env.PUBLIC_URL}/images/icons/envelope-solid.svg`}
+                  src="/images/icons/envelope-solid.svg"
                   alt='Email Me'
                 />
               </div>
@@ -39,7 +39,7 @@ const Footer = () => {
               <div className='c-footer__block'>
                 <img
                   className='c-footer__img'
-                  src={`${process.env.PUBLIC_URL}/images/icons/whatsapp-brands.svg`}
+                  src="/images/icons/whatsapp-brands.svg"
                   alt='Whatsapp Me'
                 />
               </div>

@@ -15,7 +15,7 @@ const Me = () => {
               <div className='c-about__img'>
                 <img
                   className='c-about__me'
-                  src={process.env.PUBLIC_URL + "/images/me.jpg"}
+                  src='/images/me.jpg'
                   alt='Santiago Correa'
                 />
               </div>
